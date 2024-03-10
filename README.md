@@ -3,17 +3,25 @@
 音声認識は[Google Speech Recognition](https://github.com/Uberi/speech_recognition)で行った  
 IWSLT英語文と音声認識文とIWSLT日本語文の３つ組データと音声と画像の取得方法を公開する
 
+## データ数
+| all.txt | original | error-correction |
+| ------- | -------- | ---------------- |
+| 220444  | 106,993  | 84,682           |
+
+
 ## データ説明
-- all.txt
-`train/dev/test \t 動画ID \t WER \t IWSLT英語文 \t 音声認識文 \t IWSLT日本語文`の形式で記述されている
+- all.txt  
+`train/dev/test \t 動画ID \t WER \t IWSLT英語文 \t 音声認識文 \t IWSLT日本語文`  
+の形式で記述されている
 ```
 train	1-1	8.33	Thank you so much, Chris. And it's truly a great honor to have the opportunity to come to this stage twice; I'm extremely grateful.	thank you so much Chris and it's it's truly a great honor to have the opportunity to come to the stage twice I'm extremely grateful	どうもありがとう クリス このステージに立てる機会を 2度もいただけるというのは実に光栄なことで とてもうれしく思っています
 train	1-2	17.50	I have been blown away by this conference, and I want to thank all of you for the many nice comments about what I had to say the other night. And I say that sincerely, Put yourselves in my position.	I have been blown away by this conference and I want to thank all of you for the the many nice comments about what I had to say the the other night and I say that sincerely partly because	このカンファレンスには圧倒されっぱなしです 皆さんから― 前回の講演に対していただいた温かいコメントにお礼を申し上げたい 心からそう思っています それというのも…ううっ…私には必要なものでしたから！ どうか私の立場で考えてみてください！
 train	1-3	100.00	I flew on Air Force Two for eight years.	put yourself in my position	8年間私はエアフォースツーで飛んでいました
 ```
 
-- original.txt / error-correction.txt
-`train/dev/test \t 動画ID \t IWSLT英語文 \t 音声認識文 \t IWSLT日本語文`の形式で記述されている
+- original.txt / error-correction.txt  
+`train/dev/test \t 動画ID \t IWSLT英語文 \t 音声認識文 \t IWSLT日本語文`  
+の形式で記述されている
 ```
 test	1382-1	Today I'm going to talk about unexpected discoveries.	today I'm going to talk about unexpected discoveries	本日お話するのは 思ってもなかった発見についてです
 test	1382-2	Now I work in the solar technology industry.	I work in solar technology industry in	私は 太陽光発電の活用に携わっています
@@ -21,7 +29,8 @@ test	1382-3	And my small startup is looking to force ourselves into the environm
 ```
 
 - url_list.txt  
-`train/dev/test \t 動画ID \t 動画タイトル \t TEDのURL \t 動画のURL`の形式で記述されている
+`train/dev/test \t 動画ID \t 動画タイトル \t TEDのURL \t 動画のURL`  
+の形式で記述されている
 ```
 train	1	Al Gore: Averting the climate crisis	http://www.ted.com/talks/al_gore_on_averting_climate_crisis	https://py.tedcdn.com/consus/projects/00/21/03/001/products/2006-al-gore-001-fallback-cbf9bf8e82c87149b369004928eb3fb8-1200k.mp4
 train	2	Amy Smith: Simple designs to save a life	http://www.ted.com/talks/amy_smith_shares_simple_lifesaving_design	https://py.tedcdn.com/consus/projects/00/18/61/002/products/2006-amy-smith-002-fallback-44001df5c6dc1bc6318fa8014c51e14d-1200k.mp4
@@ -31,7 +40,8 @@ train	3	Ashraf Ghani: How to rebuild a broken state	http://www.ted.com/talks/ash
 - timestamp.txt  
 `動画ID \t テキストID \t タイムスタンプ（head） \t 画像ID（head） \t タイムスタンプ（middle） \t 画像ID（middle） \t タイムスタンプ（tail） \t 画像ID（tail）`  
 または  
-`動画ID \t テキストID \t タイムスタンプ（tail） \t 画像ID（tail）`の形式で記述されている
+`動画ID \t テキストID \t タイムスタンプ（tail） \t 画像ID（tail）`  
+の形式で記述されている
 ```
 1	1-1	00:0.000	1-1-head	00:5.620	1-1-middle	00:11.240	1-1-tail
 1	1-2	00:11.240	1-2-head	00:20.000	1-2-middle	00:28.760	1-2-tail
@@ -44,9 +54,9 @@ train	3	Ashraf Ghani: How to rebuild a broken state	http://www.ted.com/talks/ash
 ```
 
 
+## データ作成
 動画・音声・画像を以下の手順で取得できる
 
-## データ作成
 ### 準備
 ```
 mkdir video_directory
