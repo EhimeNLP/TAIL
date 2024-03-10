@@ -1,5 +1,5 @@
 # TAIL
-既存データの[IWSLT2017]([https://github.com/Uberi/speech_recognition](https://wit3.fbk.eu/2017-01-d))の英日対訳コーパスに音声認識英語文、音声、画像を付与した５つ組データセットである  
+既存データの[IWSLT2017](https://wit3.fbk.eu/2017-01-d)の英日対訳コーパスに音声認識英語文、音声、画像を付与した５つ組データセットである  
 音声認識は[Google Speech Recognition](https://github.com/Uberi/speech_recognition)で行った  
 IWSLT英語文と音声認識文とIWSLT日本語文の３つ組データと音声と画像の取得方法を公開する
 
