@@ -99,8 +99,7 @@ python3 select_line.py "all.txt" output_file wer_1 wer_2 len_1 len_2
 ## 文献情報
 寺面杏優, 近藤里咲, 梶原智之, 二宮崇.  
 講演動画の言語横断字幕生成のための英日マルチモーダル対訳コーパスの構築.  
-言語処理学会第30回年次大会, pp.2002-2006, March 2024.   
-https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P7-11.pdf
+言語処理学会第30回年次大会, pp.2002-2006, March 2024.[[pdf](https://www.anlp.jp/proceedings/annual_meeting/2024/pdf_dir/P7-11.pdf)]
 
 ## ライセンス
 Creative Commons Attribution 4.0 International License (CC BY 4.0)
